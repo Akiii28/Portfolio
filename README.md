@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakash Vishwakarma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+            --secondary: #6366f1;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+        }
+        
+        .timeline-line {
+            width: 2px;
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Aakash Vishwakarma</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#education" class="hover:text-blue-600 transition">Education</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full px-4 pb-4">
+            <a href="#home" class="block py-2 hover:text-blue-600">Home</a>
+            <a href="#about" class="block py-2 hover:text-blue-600">About</a>
+            <a href="#skills" class="block py-2 hover:text-blue-600">Skills</a>
+            <a href="#education" class="block py-2 hover:text-blue-600">Education</a>
+            <a href="#contact" class="block py-2 hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16 text-white">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Aakash Vishwakarma</h1>
+                <p class="text-xl mb-6">Passionate IT Graduate | Aspiring Developer</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition">Contact Me</a>
+                    <a href="#about" class="border-2 border-white px-6 py-2 rounded-full font-medium hover:bg-white hover:text-blue-600 transition">Know More</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="rounded-full overflow-hidden border-4 border-white shadow-xl w-64 h-64">
+                    <a target="_blank" href="https://imghost.online/nVhopzCpcYqfRoP"><img  src="https://imghost.online/ib/83rADhnoYJ8CTkR_1754048344.jpg" alt="avatar.jpg"/></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400" alt="Aakash Vishwakarma working on a laptop with code on the screen" class="rounded-lg shadow-md w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h3 class="text-2xl font-semibold mb-4">Eager to Launch My IT Career</h3>
+                    <p class="mb-4 text-gray-700">Recent graduate with a Bachelor of Science in Information Technology from Mumbai University. While I'm just beginning my professional journey, I bring fresh perspective, strong technical foundations, and enthusiasm for web development.</p>
+                    <p class="mb-4 text-gray-700">Fluent in both Hindi and English, I enjoy collaborating with diverse teams and soaking up knowledge from experienced professionals.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="font-medium"><span class="text-blue-600">Name:</span> Aakash Vishwakarma</p>
+                            <p class="font-medium"><span class="text-blue-600">Degree:</span> B.Sc IT</p>
+                        </div>
+                        <div>
+                            <p class="font-medium"><span class="text-blue-600">Phone:</span> +91 9665876642</p>
+                            <p class="font-medium"><span class="text-blue-600">Email:</span> av786906@gmail.com</p>
+                        </div>
+                       <div><a href="https://drive.google.com/file/d/1RUnZEbOig-yeg34bwTkGW0whLUVbJQGS/view?usp=sharing"color: black">Download Resume</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">My Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill 1 -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-transparent transition duration-300 hover:shadow-lg">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fab fa-html5 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">HTML & CSS</h3>
+                    <p class="text-gray-600">Solid foundation in building responsive web layouts with semantic HTML and modern CSS techniques.</p>
+                    <div class="mt-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-transparent transition duration-300 hover:shadow-lg">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fab fa-js-square text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                    <p class="text-gray-600">Understanding of programming fundamentals, DOM manipulation, and ES6 features.</p>
+                    <div class="mt-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-transparent transition duration-300 hover:shadow-lg">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fab fa-react text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">React Basics</h3>
+                    <p class="text-gray-600">Familiarity with component-based architecture and state management concepts.</p>
+                    <div class="mt-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-transparent transition duration-300 hover:shadow-lg">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fas fa-server text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cloud Computing</h3>
+                    <p class="text-gray-600">Basic knowledge of cloud service models and deployment concepts.</p>
+                    <div class="mt-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill 5 -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-transparent transition duration-300 hover:shadow-lg">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fas fa-database text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Database Fundamentals</h3>
+                    <p class="text-gray-600">Understanding of relational database concepts and SQL basics.</p>
+                    <div class="mt-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill 6 -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-transparent transition duration-300 hover:shadow-lg">
+                    <div class="text-blue-600 mb-2">
+                        <i class="fas fa-language text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Languages</h3>
+                    <p class="text-gray-600">Fluent in Hindi and English - written and verbal communication skills.</p>
+                    <div class="mt-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Education & Certification</h2>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="timeline-line absolute left-6 md:left-1/2 h-full"></div>
+                
+                <!-- Timeline item 1 -->
+                <div class="mb-10 flex items-center justify-between md:justify-start">
+                    <div class="w-5/12 md:w-5/12 pr-4 md:pr-0 md:text-right">
+                        <h3 class="font-bold text-lg">Bachelor of Science (IT)</h3>
+                        <p class="text-gray-600">University of Mumbai</p>
+                        <p class="text-sm text-gray-500">2021 - 2024</p>
+                    </div>
+                    <div class="w-12 h-12 mx-4 rounded-full flex items-center justify-center bg-blue-100 border-2 border-blue-600 flex-shrink-0">
+                        <div class="timeline-dot rounded-full"></div>
+                    </div>
+                    <div class="w-5/12 md:w-5/12 pl-4">
+                        <div class="invisible md:visible">
+                            <p class="italic">Focused on programming fundamentals, web technologies, and information systems.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 2 -->
+                <div class="mb-10 flex items-center justify-between md:justify-start flex-row-reverse md:flex-row">
+                    <div class="w-5/12 md:w-5/12 pl-4 md:text-left">
+                        <div class="visible md:invisible">
+                            <p class="italic">Completed higher secondary education with focus on science and mathematics.</p>
+                        </div>
+                    </div>
+                    <div class="w-12 h-12 mx-4 rounded-full flex items-center justify-center bg-blue-100 border-2 border-blue-600 flex-shrink-0">
+                        <div class="timeline-dot rounded-full"></div>
+                    </div>
+                    <div class="w-5/12 md:w-5/12 pr-4 md:text-right">
+                        <h3 class="font-bold text-lg">Class XII (HSC)</h3>
+                        <p class="text-gray-600">Maharashtra Board</p>
+                        <p class="text-sm text-gray-500">2018 - 2020</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 3 -->
+                <div class="mb-10 flex items-center justify-between md:justify-start">
+                    <div class="w-5/12 md:w-5/12 pr-4 md:pr-0 md:text-right">
+                        <h3 class="font-bold text-lg">Web Development Certification</h3>
+                        <p class="text-gray-600">Various Platforms</p>
+                        <p class="text-sm text-gray-500">2023</p>
+                    </div>
+                    <div class="w-12 h-12 mx-4 rounded-full flex items-center justify-center bg-blue-100 border-2 border-blue-600 flex-shrink-0">
+                        <div class="timeline-dot rounded-full"></div>
+                    </div>
+                    <div class="w-5/12 md:w-5/12 pl-4">
+                        <p class="italic">Completed multiple online certifications in HTML, CSS and JavaScript fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Goals Section -->
+    <section class="py-16 hero-gradient text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">My Professional Goals</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-3xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Master Web Development</h3>
+                    <p>Deepen my expertise in modern JavaScript frameworks and full-stack development.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-3xl mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Contribute to Meaningful Projects</h3>
+                    <p>Work on applications that solve real problems and make a difference.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-3xl mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Build Professional Network</h3>
+                    <p>Connect with mentors and peers to accelerate my learning journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-600">av786906@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-gray-600">+91 966587662</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-4 mt-1">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">LinkedIn</h4>
+                                <p class="text-gray-600">linkedin.com/in/aakash-vishwakarma-42b593225</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Currently Located</h3>
+                        <div class="rounded-lg overflow-hidden h-64">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d67832.58300916296!2d72.75173601633433!3d19.457665191750273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aa23dce7efbf%3A0x99bd87871748d8f4!2sVirar%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1754112515149!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <input type="text" id="subject" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Aakash Vishwakarma</h3>
+                    <p class="text-gray-400">Aspiring IT Professional</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/Akiii28" class="hover:text-blue-400 transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aakash-vishwakarma-42b593225" class="hover:text-blue-400 transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-400 transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-gray-400 text-sm">
+                <p>© <span id="year"></span> Aakash Vishwakarma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
